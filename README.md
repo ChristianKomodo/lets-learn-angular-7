@@ -1,5 +1,5 @@
 # Let's Learn Angular 7!
-Practice Angular 7 Project based on the [Coursetro "Learn By Example"](https://coursetro.com/posts/code/171/Angular-7-Tutorial---Learn-Angular-7-by-Example) course.
+Practice Angular 7 Project based on the [Coursetro "Learn Angular 7 by Example"](https://coursetro.com/posts/code/171/Angular-7-Tutorial---Learn-Angular-7-by-Example) tutorial.
 
 ## Installation
 1. `git clone` this repo
