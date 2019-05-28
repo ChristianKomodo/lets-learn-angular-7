@@ -1,3 +1,38 @@
+
+// Breakpoint Mixin
+
+// From Manish's mixin
+// @import 'sass/manish-breakpoint.scss';
+
+// From Foundation's Breakpoint mixin
+@import 'sass/new-breakpoint.scss';
+
+
+
+
+.chris {
+    font-weight: 700;
+    padding: 6px;
+    @include breakpoint(small only) {
+        background: violet;
+		color: purple;
+	}
+	@include breakpoint(medium up) {
+        background: lightblue;
+        color: dodgerblue;
+	}
+}
+
+
+
+
+
+
+
+
+
+// From Coursetro tutorial
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 body, html {

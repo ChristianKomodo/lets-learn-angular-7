@@ -1,0 +1,42 @@
+/*
+  Used like this:
+    @include breakpoint('mobile-up) {
+       //Content Here
+    }
+*/
+
+// Breakpoints Map
+$breakpoints: (
+  'small'       : 'only screen and (max-width : 20em)',                                  // 0      < 320px
+  'mobile'      : 'only screen and (min-width : 20.0625em) and (max-width : 47.9375em)', // 321px  < 767px
+  'mobile-up'   : 'only screen and (min-width : 20.0625em)',                             // 321px  <
+  'mobile down' : 'only screen and (max-width : 47.9375em)',                             // 0      < 767px
+  'tablet'      : 'only screen and (min-width : 48em) and (max-width : 64em)',           // 768px  < 1024px
+  'tablet up'   : 'only screen and (min-width : 48em)',                                  // 768px  <
+  'tablet down' : 'only screen and (max-width : 64em)',                                  // 0      < 1024px
+  'desktop'     : 'only screen and (min-width : 64em)'                                   // 1024px <
+);
+
+/**
+ * Used to set media queries throughout the app.
+ * @param   {String}  $size  mobile, mobile-down, tablet, etc.
+ */
+@mixin breakpoint($size) {
+
+	@each $key,
+	$val in $breakpoints {
+		@if $size==$key {
+			@media #{$val} {
+				@content;
+			}
+		}
+	}
+}
+
+
+.chris {
+	background: violet;
+	@include breakpoint(mobile-up) {
+		color: purple;
+	}
+}
