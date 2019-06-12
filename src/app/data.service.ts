@@ -9,8 +9,8 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  serviceClick() {
-    return console.log('clicked');
+  serviceClick(firstUser) {
+    return console.log('First User is ', firstUser.data[0].first_name);
   }
 
   getUsers() {

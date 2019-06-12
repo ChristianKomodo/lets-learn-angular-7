@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   firstClick() {
-    this.data.serviceClick();
+    this.data.serviceClick(this.users);
   }
 
 }
