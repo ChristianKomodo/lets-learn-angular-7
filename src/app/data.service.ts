@@ -14,7 +14,16 @@ export class DataService {
   }
 
   getUsers() {
-    return this.http.get('https://reqres.in/api/users')
-  }
+    return this.http.get('https://reqres.in/api/users');
+    // return this.http.get('http://jsonplaceholder.typicode.com/users');
+	}
+
+  getColors() {
+    return this.http.get('https://reqres.in/api/unknown');
+	}
+	
+	getPosts() {
+		return this.http.get('http://jsonplaceholder.typicode.com/posts');
+	}
 
 }
